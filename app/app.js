@@ -5,7 +5,7 @@ const socket = io.connect('http://localhost:3000');
 const faker = require('faker');
 
 setInterval( () => {
-  socket.emit('speak', faker.hacker.phrase());
+  socket.emit('file-error', faker.hacker.phrase());
 }, 750);
 
 // const fs = require('fs');
