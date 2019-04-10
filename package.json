@@ -1,7 +1,7 @@
 {
-  "name": "tcp-lab",
+  "name": "socketio-lab",
   "version": "1.0.0",
-  "description": "TCP Lab",
+  "description": "Socket.io lab",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
