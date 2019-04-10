@@ -7,11 +7,12 @@ io.on('connection', (socket) => {
 
   socket.on('file-error', (payload) => {
     console.log('ERROR:', payload);
-    // socket.broadcast.emit('message', payload);
+    socket.broadcast.emit('error', payload);
   });
 
   socket.on('file-save', (payload) => {
     console.log('SUCCESS:', payload);
+    socket.broadcast.emit('success', payload);
   });
 
   socket.on('disconnect', () => {
