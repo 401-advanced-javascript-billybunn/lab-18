@@ -17,20 +17,20 @@ const alterFile = (file) => {
     .then(buffer => uppercase(buffer))
     .then(buffer => write(file, buffer))
     .then(success => {
-      let payload = JSON.stringify({
+      let payload = {
         status: 1,
         file: file,
         text: 'saved properly',
-      });
+      };
       socket.emit('file-save', payload);
     })
 
     .catch(error => {
-      let payload = JSON.stringify({
+      let payload = {
         status: 0, 
         file: file, 
         text: error.message,
-      });
+      };
       socket.emit('file-error', payload);
     });
 
